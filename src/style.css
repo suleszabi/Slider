@@ -1,0 +1,153 @@
+:root {
+    --color-1: #21d4fd;
+    --color-2: #b721ff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#slider {
+    overflow-x: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    scroll-behavior: smooth;
+}
+
+#slider::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+#sliderInner {
+    font-size: 0;
+    white-space: nowrap;
+}
+
+.slider-page{
+    display: inline-block;
+}
+
+#sliderDetectionZone {
+    position: absolute;
+}
+
+.slider-page img {
+    width: 100%;
+}
+
+#sliderIndicatorBox {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+    background-color: var(--color-1);
+    background-image: linear-gradient(90deg, var(--color-1), var(--color-2));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    line-height: 0.7;
+}
+
+.indicator {
+    cursor: pointer;
+}
+
+#sliderTextBox {
+    position: absolute;
+}
+
+#sliderTextBox p {
+    margin: 0;
+    line-height: 1.2;
+    font-size: 13px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: black;
+}
+
+#sliderTextBox p.active {
+    font-weight: bold;
+}
+
+#sliderTextBox p span {
+    color: transparent;
+    background-color: var(--color-2);
+    background-image: linear-gradient(0deg, var(--color-1), var(--color-2));
+    opacity: 0;
+    transition: opacity 0.3s ease 0s;
+}
+
+#sliderTextBox p.active span, #sliderTextBox p:hover span {
+    opacity: 1;
+}
+
+@media (min-width: 359px) {
+    #sliderTextBox p {
+        line-height: 1.4;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 450px) {
+    #sliderIndicatorBox {
+        font-size: 54px;
+        letter-spacing: 4px;
+        padding-top: 4px;
+        padding-bottom: 8px;
+    }
+
+    #sliderTextBox p {
+        line-height: 1.5;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 576px) {
+    #sliderTextBox p {
+        line-height: 1.6;
+        font-size: 19px;
+    }
+
+    .navbar-spacing {
+        height: 72px;
+    }
+}
+
+@media (min-width: 768px) {
+    #sliderIndicatorBox {
+        font-size: 64px;
+        letter-spacing: 8px;
+    }
+
+    #sliderTextBox p {
+        line-height: 1.8;
+        font-size: 21px;
+    }
+}
+
+@media (min-width: 992px) {
+    #sliderIndicatorBox {
+        font-size: 74px;
+        letter-spacing: 14px;
+    }
+
+    #sliderTextBox p {
+        line-height: 2;
+        font-size: 24px;
+        letter-spacing: 2px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #sliderTextBox p {
+        line-height: 2.3;
+        font-size: 26px;
+    }
+}
+
+@media (min-width: 1400px) {
+    #sliderTextBox p {
+        line-height: 2.1;
+        font-size: 26px;
+        letter-spacing: 3px;
+    }
+}
